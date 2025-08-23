@@ -67,11 +67,10 @@ export default function Home() {
       </div>
 
       {/* Hero Section */}
-      <main className="relative z-10 flex items-center min-h-screen px-4 sm:px-6 md:px-8 lg:px-8 pt-16 sm:pt-20">
-        <div className="max-w-6xl mx-auto w-full">
-          <div className="flex items-center">
-            {/* Content */}
-            <div className="flex-1">
+      <main className="relative z-10 flex items-center justify-center min-h-screen px-4 sm:px-6 md:px-8 lg:px-8 pt-16">
+        <div className="max-w-4xl mx-auto">
+          {/* Content */}
+          <div>
               {/* Main Heading */}
               <div className="space-y-1 sm:space-y-2 mb-4 sm:mb-6">
                 <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
@@ -134,7 +133,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
         </div>
       </main>
     </div>
