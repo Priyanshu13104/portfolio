@@ -1,8 +1,10 @@
 import Image from "next/image";
 import CardNav from "./components/CardNav/CardNav";
 import LightRays from "./components/LightRays/LightRays";
+import SplitText from "./components/SplitText/SplitText";
 
 export default function Home() {
+
   // Card navigation data
   const cardNavItems = [
     {
@@ -67,16 +69,42 @@ export default function Home() {
       </div>
 
       {/* Hero Section */}
-      <main className="relative z-10 flex items-center justify-center min-h-screen px-4 sm:px-6 md:px-8 lg:px-8 pt-16">
+      <main className="relative z-10 flex items-center justify-center min-h-screen px-6 sm:px-6 md:px-8 lg:px-8 pt-16">
         <div className="max-w-4xl mx-auto">
           {/* Content */}
           <div>
               {/* Main Heading */}
               <div className="space-y-1 sm:space-y-2 mb-4 sm:mb-6">
-                <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
-                  Hey, I'm <span className="text-purple-400">Priyanshu</span>
-                </h1>
-                <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+                  <SplitText
+                    text="Hey, I'm"
+                    className="inline"
+                    delay={100}
+                    duration={0.6}
+                    ease="power3.out"
+                    splitType="chars"
+                    from={{ opacity: 0, y: 40 }}
+                    to={{ opacity: 1, y: 0 }}
+                    threshold={0.1}
+                    rootMargin="-100px"
+                    textAlign="left"
+                  />
+                  <span className="inline"> </span>
+                  <SplitText
+                    text="Priyanshu"
+                    className="inline text-purple-400"
+                    delay={100}
+                    duration={0.6}
+                    ease="power3.out"
+                    splitType="chars"
+                    from={{ opacity: 0, y: 40 }}
+                    to={{ opacity: 1, y: 0 }}
+                    threshold={0.1}
+                    rootMargin="-100px"
+                    textAlign="left"
+                  />
+                </div>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                   <span className="text-white">A </span>
                   <span className="bg-gradient-to-r from-purple-400 via-purple-300 to-blue-400 bg-clip-text text-transparent">
                     Software Developer
@@ -86,10 +114,10 @@ export default function Home() {
 
               {/* Description */}
               <div className="mb-6 sm:mb-8">
-                <p className="text-white text-lg sm:text-xl font-medium mb-2">
+                <p className="text-white text-xl sm:text-xl font-medium mb-2">
                   A fullstack developer with solid foundations in <span className="font-bold">design</span>.
                 </p>
-                <p className="text-gray-300 text-base sm:text-xl leading-relaxed">
+                <p className="text-gray-300 text-xl sm:text-xl leading-relaxed">
                   passionate about crafting seamless user experiences I thrive at the intersection
                   <span className="hidden sm:inline"><br /></span>
                   <span className="sm:hidden"> </span>of creativity and functionality.
@@ -135,6 +163,120 @@ export default function Home() {
             </div>
         </div>
       </main>
+
+      {/* Services Section */}
+      <section className="relative z-10 py-20 px-4 sm:px-6 md:px-8 lg:px-8">
+        <div className="max-w-full mx-auto px-2 sm:px-10 lg:px-32">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+              Building Digital Experiences
+            </h2>
+            <p className="text-gray-300 text-lg sm:text-xl max-w-3xl mx-auto">
+              I specialize in creating stunning user interfaces and developing high-quality applications that stand out.
+            </p>
+          </div>
+
+          {/* Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {/* What I can do Card */}
+            <div className="bg-black/20 backdrop-blur-sm border border-gray-700/30 rounded-xl p-8 hover:bg-black/30 transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <div className="bg-purple-600/20 p-3 rounded-lg mr-4">
+                  <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white">What I can do</h3>
+              </div>
+              <p className="text-gray-300 mb-6">
+                I can help develop solutions that will help you grow your business:
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-center text-gray-300">
+                  <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
+                  UI/UX Design
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
+                  Fullstack Web Development
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
+                  Database Design
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
+                  API Integration
+                </li>
+              </ul>
+            </div>
+
+            {/* Tools I Use Card */}
+            <div className="bg-black/20 backdrop-blur-sm border border-gray-700/30 rounded-xl p-8 hover:bg-black/30 transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <div className="bg-purple-600/20 p-3 rounded-lg mr-4">
+                  <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white">Tools I Use</h3>
+              </div>
+              <p className="text-gray-300 mb-6">
+                I use the latest tools and technologies to build functional and scalable products:
+              </p>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="text-white font-semibold mb-2">Frontend:</h4>
+                  <p className="text-gray-300 text-sm">Tailwind CSS, React, Node, Next</p>
+                </div>
+                <div>
+                  <h4 className="text-white font-semibold mb-2">Backend:</h4>
+                  <p className="text-gray-300 text-sm">Node.js, MongoDB</p>
+                </div>
+                <div>
+                  <h4 className="text-white font-semibold mb-2">Design:</h4>
+                  <p className="text-gray-300 text-sm">Figma</p>
+                </div>
+              </div>
+            </div>
+
+            {/* UI/UX Design Card */}
+            <div className="bg-black/20 backdrop-blur-sm border border-gray-700/30 rounded-xl p-8 hover:bg-black/30 transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <div className="bg-purple-600/20 p-3 rounded-lg mr-4">
+                  <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white">UI/UX Design</h3>
+              </div>
+              <p className="text-gray-300 mb-6">
+                I am a designer first, developer second. I can help design clean and modern interfaces:
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-center text-gray-300">
+                  <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
+                  User-Centered Design
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
+                  Modern & Clean UI
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
+                  Responsive Layouts
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
+                  Wireframes & Prototypes
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
+
