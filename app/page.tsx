@@ -128,16 +128,16 @@ export default function Home() {
       <div className="fixed inset-0 z-0 hidden lg:block">
         <LightRays
           raysOrigin="top-center"
-          raysSpeed={0.5}
+          raysSpeed={1}
           lightSpread={0.8}
           rayLength={3}
           pulsating={true}
-          fadeDistance={0.9}
-          saturation={0.8}
+          fadeDistance={1}
+          saturation={1}
           followMouse={true}
           mouseInfluence={0.15}
-          noiseAmount={0.1}
-          distortion={0.05}
+          noiseAmount={0}
+          distortion={0}
           className="opacity-30"
         />
       </div>
