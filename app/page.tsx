@@ -276,6 +276,90 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Contact Section */}
+      <section className="relative z-10 py-20 px-4 sm:px-6 md:px-8 lg:px-8">
+        <div className="max-w-full mx-auto px-2 sm:px-10 lg:px-32 xl:px-40 2xl:px-48">
+          {/* Contact Content Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left Side - Text Content */}
+            <div className="space-y-6">
+              <div className="space-y-4">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold leading-tight">
+                  <span className="text-purple-400">Bringing your ideas to life.</span>
+                  <br />
+                  <span className="text-white">Let&apos;s turn your vision into reality</span>
+                </h2>
+                <p className="text-gray-300 text-lg sm:text-xl leading-relaxed">
+                  Have a project in mind or just want to chat? Let&apos;s connect!
+                </p>
+              </div>
+            </div>
+
+            {/* Right Side - Contact Form */}
+            <div className="w-full lg:w-4/5 xl:w-4/5 lg:ml-auto">
+              <div className="bg-black/30 backdrop-blur-sm border border-gray-700/30 rounded-xl p-6 sm:p-8">
+                <form className="space-y-6">
+                  {/* Name Field */}
+                  <div>
+                    <label htmlFor="name" className="block text-white text-sm font-medium mb-2">
+                      Name
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder="Your Name"
+                      className="w-full bg-black/40 border border-gray-600/50 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 focus:ring-1 focus:ring-purple-400 transition-all duration-300"
+                      required
+                    />
+                  </div>
+
+                  {/* Email Field */}
+                  <div>
+                    <label htmlFor="email" className="block text-white text-sm font-medium mb-2">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="contact@example.com"
+                      className="w-full bg-black/40 border border-gray-600/50 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 focus:ring-1 focus:ring-purple-400 transition-all duration-300"
+                      required
+                    />
+                  </div>
+
+                  {/* Message Field */}
+                  <div>
+                    <label htmlFor="message" className="block text-white text-sm font-medium mb-2">
+                      Message
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows={5}
+                      placeholder="Your message here..."
+                      className="w-full bg-black/40 border border-gray-600/50 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 focus:ring-1 focus:ring-purple-400 transition-all duration-300 resize-none"
+                      required
+                    ></textarea>
+                  </div>
+
+                  {/* Submit Button */}
+                  <div className="pt-2">
+                    <button
+                      type="submit"
+                      className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 focus:ring-offset-black/50"
+                    >
+                      Send
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
