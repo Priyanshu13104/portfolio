@@ -9,6 +9,7 @@ type CardNavLink = {
   label: string;
   href: string;
   ariaLabel: string;
+  target?: string;
 };
 
 export type CardNavItem = {
@@ -224,6 +225,8 @@ const CardNav: React.FC<CardNavProps> = ({
                     key={`${lnk.label}-${i}`}
                     className="nav-card-link inline-flex items-center gap-[6px] no-underline cursor-pointer transition-opacity duration-300 hover:opacity-75 text-[15px] md:text-[16px]"
                     href={lnk.href}
+                    target={lnk.target}
+                    rel={lnk.target === "_blank" ? "noopener noreferrer" : undefined}
                     aria-label={lnk.ariaLabel}
                   >
                     <GoArrowUpRight

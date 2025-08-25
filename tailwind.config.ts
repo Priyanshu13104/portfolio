@@ -13,8 +13,8 @@ const config: Config = {
         foreground: 'var(--foreground)',
       },
       fontFamily: {
-        sans: ['var(--font-geist-sans)', 'Arial', 'sans-serif'],
-        mono: ['var(--font-geist-mono)', 'Courier New', 'monospace'],
+        sans: ['"DM Sans"', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        mono: ['SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Courier New', 'monospace'],
       },
     },
   },
