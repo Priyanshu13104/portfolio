@@ -1,6 +1,7 @@
 import Image from "next/image";
 import CardNav from "./components/CardNav/CardNav";
 import LightRays from "./components/LightRays/LightRays";
+import DotGrid from "./components/DotGrid/DotGrid";
 import SplitText from "./components/SplitText/SplitText";
 
 export default function Home() {
@@ -36,9 +37,28 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black lg:bg-none lg:bg-black relative overflow-hidden">
-      {/* Light Rays Background */}
-      <div className="fixed inset-0 z-0">
+    <div className="min-h-screen bg-black lg:bg-gradient-to-br lg:from-gray-900 lg:via-gray-800 lg:to-black lg:bg-none lg:bg-black relative overflow-hidden">
+      {/* Mobile Background - DotGrid */}
+      <div className="fixed inset-0 z-0 lg:hidden w-full h-full">
+        <DotGrid
+          dotSize={2}
+          gap={20}
+          baseColor="#271E37"
+          activeColor="#5227FF"
+          proximity={120}
+          speedTrigger={100}
+          shockRadius={200}
+          shockStrength={5}
+          maxSpeed={200}
+          resistance={750}
+          returnDuration={0.8}
+          className="w-full h-full px-0.5"
+          style={{ width: '100%', height: '100%' }}
+        />
+      </div>
+
+      {/* Desktop Background - Light Rays */}
+      <div className="fixed inset-0 z-0 hidden lg:block">
         <LightRays
           raysOrigin="top-center"
           raysSpeed={0.5}
