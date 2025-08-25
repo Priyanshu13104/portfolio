@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { useState, useRef } from "react";
 import emailjs from '@emailjs/browser';
 import CardNav from "./components/CardNav/CardNav";
@@ -63,10 +62,10 @@ export default function Home() {
     } catch (error) {
       console.error('Failed to send email:', error);
       console.error('Error details:', {
-        name: (error as any)?.name,
-        message: (error as any)?.message,
-        status: (error as any)?.status,
-        text: (error as any)?.text
+        name: (error as Error)?.name,
+        message: (error as Error)?.message,
+        status: (error as { status?: number })?.status,
+        text: (error as { text?: string })?.text
       });
       setSubmitStatus('error');
     } finally {
@@ -442,7 +441,7 @@ export default function Home() {
                   {/* Status Messages */}
                   {submitStatus === 'success' && (
                     <div className="bg-green-500/20 border border-green-500/50 rounded-lg p-3 text-green-300 text-sm">
-                      ✅ Message sent successfully! I'll get back to you soon.
+                      ✅ Message sent successfully! I&apos;ll get back to you soon.
                     </div>
                   )}
                   

@@ -5,9 +5,9 @@ import { InertiaPlugin } from "gsap/InertiaPlugin";
 
 gsap.registerPlugin(InertiaPlugin);
 
-const throttle = (func: (...args: any[]) => void, limit: number) => {
+const throttle = <T extends unknown[]>(func: (...args: T) => void, limit: number) => {
   let lastCall = 0;
-  return function (this: any, ...args: any[]) {
+  return function (this: unknown, ...args: T) {
     const now = performance.now();
     if (now - lastCall >= limit) {
       lastCall = now;
@@ -113,10 +113,6 @@ const DotGrid: React.FC<DotGridProps> = ({
     const cols = Math.floor((availableWidth + gap) / (dotSize + gap));
     const rows = Math.floor((availableHeight + gap) / (dotSize + gap));
     const cell = dotSize + gap;
-
-    // Calculate grid dimensions to cover the full area
-    const gridW = cell * cols - gap;
-    const gridH = cell * rows - gap;
 
     // Start with padding from edges
     const startX = padding + dotSize / 2;
