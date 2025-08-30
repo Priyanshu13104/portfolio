@@ -132,7 +132,7 @@ export default function Home() {
           raysSpeed={1}
           lightSpread={0.8}
           rayLength={3}
-          pulsating={true}
+          pulsating={false}
           fadeDistance={1}
           saturation={1}
           followMouse={true}
