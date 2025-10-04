@@ -89,7 +89,7 @@ export default function Home() {
       bgColor: "#c27aff",
       textColor: "#FFFFFF",
       links: [
-        { label: "Resume", href: "#", ariaLabel: "Download resume" }
+        { label: "Resume", href: "/Priyanshu_Prajapati_Resume.pdf", target: "_blank", download: true, ariaLabel: "Download resume" }
       ]
     },
     {

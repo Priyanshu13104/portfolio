@@ -1,0 +1,13 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow admin or private pages (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Sitemap location
+Sitemap: https://priyanshuprajapati.me/sitemap.xml
+
+# Crawl-delay (optional, in seconds)
+# Crawl-delay: 1
